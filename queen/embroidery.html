@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Embroidery | New Queen Tailor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, rgba(93, 58, 155, 0.1) 0%, rgba(157, 129, 64, 0.1) 100%);
+    }
+    .hover-zoom {
+      transition: transform 0.3s ease;
+    }
+    .hover-zoom:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo/logo without bg.png" alt="Logo" class="h-20 w-auto" />
+      <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+    </div>
+    <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
+      <li><a href="index.html" class="hover:text-[#9D8140] transition">HOME</a></li>
+      <li><a href="women.html" class="hover:text-[#9D8140] transition">WOMEN</a></li>
+      <li><a href="men.html" class="hover:text-[#9D8140] transition">MEN</a></li>
+      <li><a href="embroidery.html" class="text-[#9D8140] font-bold">EMBROIDERY</a></li>
+      <li><a href="order-and-stitch.html" class="hover:text-[#9D8140] transition">ORDER & STITCH</a></li>
+      <li><a href="premium.html" class="hover:text-[#9D8140] transition">PREMIUM</a></li>
+      <li><a href="wedding.html" class="hover:text-[#9D8140] transition">WEDDING TAILORING</a></li>
+
+      <!-- CONTACT with dropdown -->
+      <li class="relative group">
+        <a href="#" class="hover:text-[#9D8140] transition">CONTACT</a>
+        <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-lg p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800">
+          <div>
+            <h4 class="font-bold mb-2">Contact Us</h4>
+            <p><strong>Call:</strong> +91 6381568585</p>
+            <p><strong>WhatsApp:</strong> +91 9486639475</p>
+            <a href="#" class="text-purple-600 block mt-2 hover:underline">Email us</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Tirupathur Store</h4>
+            <p>11, Arasamara Street,</p>
+            <p>Sivanar Street, Tirupathur – 635601</p>
+            <p><em>(Opp. Kesavalu Reddy Complex)</em></p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Visit Us</h4>
+            <img src="images\logo\tailor_app_banner.svg" class="w-32 h-24 object-cover rounded" />
+          </div>
+        </div>
+      </li>
+    </ul>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 text-center gradient-bg">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#5D3A9B] mb-6">Exquisite Embroidery Designs</h1>
+      <p class="text-xl text-gray-700 mb-8">Transform your garments with our handcrafted embroidery. From traditional zari work to contemporary designs, we bring your vision to life.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#services" class="px-6 py-3 bg-[#9D8140] text-white font-semibold rounded-full hover:bg-amber-700 transition shadow-lg">
+          Explore Designs <i class="fas fa-arrow-down ml-2"></i>
+        </a>
+        <a href="#custom" class="px-6 py-3 bg-[#5D3A9B] text-white font-semibold rounded-full hover:bg-purple-800 transition shadow-lg">
+          Custom Request <i class="fas fa-pen-fancy ml-2"></i>
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4">Why Choose Our Embroidery?</h2>
+        <div class="w-24 h-1 bg-[#9D8140] mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-6 rounded-xl hover-zoom">
+          <div class="text-[#9D8140] text-4xl mb-4">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">25+ Years Experience</h3>
+          <p class="text-gray-600">Master artisans with decades of expertise in traditional and modern embroidery techniques.</p>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl hover-zoom">
+          <div class="text-[#9D8140] text-4xl mb-4">
+            <i class="fas fa-thread"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Premium Materials</h3>
+          <p class="text-gray-600">We use only high-quality threads, zari, stones, and embellishments for lasting beauty.</p>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl hover-zoom">
+          <div class="text-[#9D8140] text-4xl mb-4">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Perfect Fit Guarantee</h3>
+          <p class="text-gray-600">Embroidery designed specifically for your garment's measurements and drape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Embroidery Services -->
+  <section id="services" class="py-16 gradient-bg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4">Our Embroidery Services</h2>
+        <div class="w-24 h-1 bg-[#9D8140] mx-auto"></div>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Browse our popular embroidery categories</p>
+      </div>
+      
+      <!-- Blouse Embroidery -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div class="order-1 md:order-1">
+          <img src="images/BlouseEmbroider.jpeg" alt="Blouse Embroidery" class="w-full rounded-xl shadow-lg hover-zoom" loading="lazy"/>
+        </div>
+        <div class="order-2 md:order-2">
+          <h3 class="text-2xl font-bold text-[#5D3A9B] mb-4">Blouse Embroidery</h3>
+          <p class="text-gray-700 mb-4">Elevate your saree look with exquisite blouse embroidery. Choose from:</p>
+          <ul class="grid grid-cols-2 gap-2 mb-6">
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Zari work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Stone embellishments</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Thread embroidery</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Mirror work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Kundan sets</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Pearl detailing</li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a href="dummy.pdf" target="_blank" class="px-5 py-2 bg-[#5D3A9B] text-white font-semibold rounded-lg hover:bg-purple-800 transition shadow-md">
+              View Catalog
+            </a>
+            <a href="#custom" class="px-5 py-2 border-2 border-[#5D3A9B] text-[#5D3A9B] font-semibold rounded-lg hover:bg-purple-50 transition">
+              Custom Design
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Dress Embroidery -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div class="order-1 md:order-2">
+          <img src="images/dressem.jpeg" alt="Dress Embroidery" class="w-full rounded-xl shadow-lg hover-zoom" loading="lazy"/>
+        </div>
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-[#5D3A9B] mb-4">Dress Embroidery</h3>
+          <p class="text-gray-700 mb-4">Make your dresses stand out with beautiful embroidery:</p>
+          <ul class="grid grid-cols-2 gap-2 mb-6">
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Floral patterns</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Geometric designs</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Phulkari work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Chikankari</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> French knots</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Beadwork</li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a href="dummy.pdf" target="_blank" class="px-5 py-2 bg-[#5D3A9B] text-white font-semibold rounded-lg hover:bg-purple-800 transition shadow-md">
+              View Catalog
+            </a>
+            <a href="#custom" class="px-5 py-2 border-2 border-[#5D3A9B] text-[#5D3A9B] font-semibold rounded-lg hover:bg-purple-50 transition">
+              Custom Design
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Saree Pallu Embroidery -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div class="order-1 md:order-1">
+          <img src="images/saare.jpeg" alt="Saree Pallu Embroidery" class="w-full rounded-xl shadow-lg hover-zoom" loading="lazy"/>
+        </div>
+        <div class="order-2 md:order-2">
+          <h3 class="text-2xl font-bold text-[#5D3A9B] mb-4">Saree Pallu Embroidery</h3>
+          <p class="text-gray-700 mb-4">Enhance your saree's elegance with pallu embroidery:</p>
+          <ul class="grid grid-cols-2 gap-2 mb-6">
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Temple border designs</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Zardosi work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Mukaish work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Gota patti</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Resham thread</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Kasuti embroidery</li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a href="dummy.pdf" target="_blank" class="px-5 py-2 bg-[#5D3A9B] text-white font-semibold rounded-lg hover:bg-purple-800 transition shadow-md">
+              View Catalog
+            </a>
+            <a href="#custom" class="px-5 py-2 border-2 border-[#5D3A9B] text-[#5D3A9B] font-semibold rounded-lg hover:bg-purple-50 transition">
+              Custom Design
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Kids Embroidery -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div class="order-1 md:order-2">
+          <img src="images/kids.jpg" alt="Kids Embroidery" class="w-full rounded-xl shadow-lg hover-zoom" loading="lazy"/>
+        </div>
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-[#5D3A9B] mb-4">Kids Embroidery</h3>
+          <p class="text-gray-700 mb-4">Adorable embroidery for your little ones:</p>
+          <ul class="grid grid-cols-2 gap-2 mb-6">
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Cartoon characters</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Name initials</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Animal motifs</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Floral patterns</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Applique work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Rainbow designs</li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a href="dummy.pdf" target="_blank" class="px-5 py-2 bg-[#5D3A9B] text-white font-semibold rounded-lg hover:bg-purple-800 transition shadow-md">
+              View Catalog
+            </a>
+            <a href="#custom" class="px-5 py-2 border-2 border-[#5D3A9B] text-[#5D3A9B] font-semibold rounded-lg hover:bg-purple-50 transition">
+              Custom Design
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bridal Embroidery -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-1 md:order-1">
+          <img src="images/brida.jpeg" alt="Bridal Embroidery" class="w-full rounded-xl shadow-lg hover-zoom" loading="lazy"/>
+        </div>
+        <div class="order-2 md:order-2">
+          <h3 class="text-2xl font-bold text-[#5D3A9B] mb-4">Bridal Embroidery</h3>
+          <p class="text-gray-700 mb-4">Royal embroidery for your special day:</p>
+          <ul class="grid grid-cols-2 gap-2 mb-6">
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Heavy zari work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Kundan sets</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Pearl embroidery</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Nakshi kantha</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Dabka work</li>
+            <li class="flex items-center"><i class="fas fa-check text-[#9D8140] mr-2"></i> Moti work</li>
+          </ul>
+          <div class="flex flex-wrap gap-4">
+            <a href="dummy.pdf" target="_blank" class="px-5 py-2 bg-[#5D3A9B] text-white font-semibold rounded-lg hover:bg-purple-800 transition shadow-md">
+              View Catalog
+            </a>
+            <a href="#custom" class="px-5 py-2 border-2 border-[#5D3A9B] text-[#5D3A9B] font-semibold rounded-lg hover:bg-purple-50 transition">
+              Custom Design
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Design Section -->
+  <section id="custom" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4">Custom Embroidery Design</h2>
+        <div class="w-24 h-1 bg-[#9D8140] mx-auto"></div>
+        <p class="mt-4 text-gray-600">Have a unique design in mind? Share your vision with us!</p>
+      </div>
+      
+      <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+        <form onsubmit="submitDesign(); return false;" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block font-medium text-gray-700 mb-1">Name *</label>
+              <input id="name" type="text" placeholder="Your Full Name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140] focus:border-transparent" required />
+            </div>
+            
+            <div>
+              <label for="phone" class="block font-medium text-gray-700 mb-1">Phone Number *</label>
+              <input id="phone" type="tel" maxlength="10" placeholder="10-digit Indian Number"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140] focus:border-transparent" required />
+            </div>
+          </div>
+          
+          <div>
+            <label for="designType" class="block font-medium text-gray-700 mb-1">Garment Type *</label>
+            <select id="designType"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#9D8140] focus:border-transparent">
+              <option value="">Select Type</option>
+              <option value="Blouse">Blouse</option>
+              <option value="Dress">Dress</option>
+              <option value="Saree Pallu">Saree Pallu</option>
+              <option value="Kidswear">Kidswear</option>
+              <option value="Bridal">Bridal</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="designDescription" class="block font-medium text-gray-700 mb-1">Design Description *</label>
+            <textarea id="designDescription" rows="4" placeholder="Describe your design in detail (colors, patterns, placement, etc.)"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140] focus:border-transparent" required></textarea>
+          </div>
+          
+          <div>
+            <label class="block font-medium text-gray-700 mb-2">Upload Design Images (Optional)</label>
+            <div class="flex items-center justify-center w-full">
+              <label class="flex flex-col w-full h-32 border-2 border-dashed border-gray-300 hover:border-[#9D8140] rounded-lg cursor-pointer hover:bg-gray-50 transition">
+                <div class="flex flex-col items-center justify-center pt-7">
+                  <i class="fas fa-cloud-upload-alt text-3xl text-[#9D8140] mb-2"></i>
+                  <p class="text-sm text-gray-500">Click to upload images</p>
+                  <p class="text-xs text-gray-400">(JPEG, PNG up to 5MB)</p>
+                </div>
+                <input type="file" class="hidden" multiple accept="image/*" />
+              </label>
+            </div>
+          </div>
+          
+          <div class="pt-4">
+            <button type="submit"
+              class="w-full px-6 py-3 bg-[#9D8140] text-white font-semibold rounded-lg hover:bg-amber-700 transition shadow-lg flex items-center justify-center">
+              <i class="fab fa-whatsapp mr-2"></i> Submit via WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-[#5D3A9B] text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to Embroider Your Dream Design?</h2>
+      <p class="text-xl mb-8">Visit our Tirupathur store or connect with us on WhatsApp to discuss your project</p>
+      
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="https://wa.me/919486639475" target="_blank" class="px-6 py-3 bg-[#9D8140] text-white font-semibold rounded-full hover:bg-amber-700 transition shadow-lg flex items-center">
+          <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+        </a>
+        <a href="tel:+916381568585" class="px-6 py-3 bg-white text-[#5D3A9B] font-semibold rounded-full hover:bg-gray-100 transition shadow-lg flex items-center">
+          <i class="fas fa-phone-alt mr-2"></i> Call Now
+        </a>
+      </div>
+      
+      <div class="mt-12 bg-white/10 p-6 rounded-xl max-w-2xl mx-auto">
+        <h3 class="font-bold mb-4">Store Location</h3>
+        <p class="mb-2">11, Arasamara Street, Sivanar Street</p>
+        <p>Tirupathur – 635601 (Opp. Kesavalu Reddy Complex)</p>
+        <p class="mt-4 text-sm">Open: Mon-Sat 9:30AM-8:30PM, Sun 10AM-2PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="images/logo/logo.png" alt="New Queen Tailor Logo" class="h-16 w-auto">
+            <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+          </div>
+          <p class="text-gray-400 mb-6">Tirupathur's premier tailoring and embroidery specialists since 1999. Crafting perfection in every stitch.</p>
+          
+          <div class="flex space-x-4">
+            <a href="https://wa.me/919486639475" target="_blank" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="women.html" class="text-gray-400 hover:text-white transition">Women's Tailoring</a></li>
+            <li><a href="men.html" class="text-gray-400 hover:text-white transition">Men's Tailoring</a></li>
+            <li><a href="embroidery.html" class="text-gray-400 hover:text-white transition">Embroidery</a></li>
+            <li><a href="wedding.html" class="text-gray-400 hover:text-white transition">Wedding Collections</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Contact Us</h3>
+          <address class="not-italic text-gray-400">
+            <div class="flex items-start gap-3 mb-4">
+              <i class="fas fa-map-marker-alt mt-1 text-[#9D8140]"></i>
+              <div>
+                11, Arasamara Street<br>
+                Sivanar Street, Tirupathur – 635601<br>
+                <em class="text-sm">(Opp. Kesavalu Reddy Complex)</em>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fas fa-phone-alt text-[#9D8140]"></i>
+              <a href="tel:+916381568585" class="hover:text-white transition">+91 6381568585</a>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-[#9D8140]"></i>
+              <a href="https://wa.me/919486639475" target="_blank" class="hover:text-white transition">+91 9486639475</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>© 2025 New Queen Tailor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919486639475" target="_blank"
+    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+    title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <script>
+    function submitDesign() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const designType = document.getElementById('designType').value.trim();
+      const description = document.getElementById('designDescription').value.trim();
+
+      if (!name || !phone || !designType || !description) {
+        alert('Please fill all required fields marked with *');
+        return;
+      }
+
+      const phoneRegex = /^[6-9]\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid 10-digit Indian phone number');
+        return;
+      }
+
+      let message = `*Custom Embroidery Design Submission*%0A%0A`;
+      message += `*Name:* ${encodeURIComponent(name)}%0A`;
+      message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+      message += `*Garment Type:* ${encodeURIComponent(designType)}%0A%0A`;
+      message += `*Design Description:*%0A${encodeURIComponent(description)}%0A%0A`;
+      message += `_Please send your design images in this WhatsApp chat._`;
+
+      window.open(`https://wa.me/919486639475?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>

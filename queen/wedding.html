@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bridal Tailoring | New Queen Tailor | Tirupathur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#9D8140',
+            royal: '#5D3A9B',
+            cream: '#F8F2EA',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(93, 58, 155, 0.8), rgba(157, 129, 64, 0.6));
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#fef9f5] to-[#f8f2ea] text-gray-800 font-sans">
+
+  <!-- Header -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo/logo without bg.png" alt="Logo" class="h-20 w-auto" />
+      <span class="text-2xl font-extrabold text-gold tracking-wide">NEW QUEEN TAILOR</span>
+    </div>
+    <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="women.html">WOMEN</a></li>
+      <li><a href="men.html" >MEN</a></li>
+      <li><a href="embroidery.html">EMBROIDERY</a></li>
+      <li><a href="order-and-stitch.html">ORDER & STITCH</a></li>
+      <li><a href="premium.html">PREMIUM</a></li>
+      <li><a href="wedding.html">WEDDING TAILORING</a></li>
+
+      <!-- CONTACT with dropdown (TPT only) -->
+      <li class="relative group">
+        <a href="#" class="hover:text-pink-600">CONTACT</a>
+        <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-lg p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800">
+          <div>
+            <h4 class="font-bold mb-2">Contact Us</h4>
+            <p><strong>Call:</strong> +91 6381568585</p>
+            <p><strong>WhatsApp:</strong> +91 9486639475</p>
+            <a href="#" class="text-purple-600 block mt-2 hover:underline">Email us</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Tirupathur Store</h4>
+            <p>11, Arasamara Street,</p>
+            <p>Sivanar Street, Tirupathur – 635601</p>
+            <p><em>(Opp. Kesavalu Reddy Complex)</em></p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Visit Us</h4>
+            <img src="images\logo\tailor_app_banner.svg" class="w-32 h-24 object-cover rounded" />
+          </div>
+        </div>
+      </li>
+    </ul>
+     </nav>
+
+  <!-- 🌟 Royal Hero Banner -->
+  <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <!-- Video background (replace with your own) -->
+    <video autoplay muted loop class="hero-video">
+      <source src="images/bridal-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Fallback image if video doesn't load -->
+    <img src="images/bridal-hero.jpg" alt="Bridal Tailoring" class="hero-video object-cover" style="display: none;">
+    
+    <div class="hero-overlay absolute inset-0 z-10"></div>
+    
+    <div class="relative z-20 px-4 text-white max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Royal Bridal Tailoring in Tirupathur</h1>
+      <p class="text-xl md:text-2xl mb-8">Perfectly stitched wedding outfits for the most important day of your life</p>
+      <a href="#book-now" class="inline-flex items-center gap-2 px-8 py-4 bg-gold text-white text-lg font-bold uppercase rounded-full hover:bg-amber-700 transition shadow-lg">
+        <i class="fas fa-calendar-check"></i> Book Bridal Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- 👗 Bridal Dress Types -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-royal mb-4">Bridal Outfit Specializations</h2>
+      <div class="w-24 h-1 bg-gold mx-auto"></div>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Expert tailoring for every wedding event in Tirupathur</p>
+    </div>
+    
+    <!-- Single Wedding Banner Image -->
+    <div class="mb-12 rounded-xl overflow-hidden shadow-lg">
+      <img src="images/sliders/Home_page_banner_wedding_5dd14e214c_PhotoGrid.png" 
+           alt="Bridal Tailoring Services" 
+           class="w-full h-auto object-cover">
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Lehengas -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="images/wedding1.jpeg" alt="Bridal Lehenga" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+          <h3 class="text-xl font-bold text-white">Lehengas</h3>
+          <a href="#book-now" class="mt-2 inline-block px-4 py-2 bg-gold text-white text-sm font-semibold rounded hover:bg-amber-700 transition">
+            Book Now
+          </a>
+        </div>
+      </div>
+      
+      <!-- Saree Blouses -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="images/wedding2.jpeg" alt="Saree Blouses" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+          <h3 class="text-xl font-bold text-white">Saree Blouses</h3>
+          <a href="#book-now" class="mt-2 inline-block px-4 py-2 bg-gold text-white text-sm font-semibold rounded hover:bg-amber-700 transition">
+            Book Now
+          </a>
+        </div>
+      </div>
+      
+      <!-- Reception Gowns -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="images/wedding3.jpg" alt="Reception Gowns" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+          <h3 class="text-xl font-bold text-white">Reception Gowns</h3>
+          <a href="#book-now" class="mt-2 inline-block px-4 py-2 bg-gold text-white text-sm font-semibold rounded hover:bg-amber-700 transition">
+            Book Now
+          </a>
+        </div>
+      </div>
+      
+      <!-- Bridesmaid -->
+      <div class="group relative overflow-hidden rounded-xl shadow-lg">
+        <img src="images/wedding4.jpeg" alt="Bridesmaid Dresses" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+          <h3 class="text-xl font-bold text-white">Bridesmaid Dresses</h3>
+          <a href="#book-now" class="mt-2 inline-block px-4 py-2 bg-gold text-white text-sm font-semibold rounded hover:bg-amber-700 transition">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+    </div>
+  </section>
+  
+
+  <!-- 📞 WhatsApp Booking -->
+  <section id="book-now" class="py-20 bg-royal text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Book Your Bridal Tailoring</h2>
+      <p class="text-xl mb-8">Schedule a consultation with our master tailors in Tirupathur</p>
+      
+      <div class="bg-white rounded-xl shadow-2xl p-8 max-w-2xl mx-auto text-gray-800">
+        <h3 class="text-2xl font-bold text-royal mb-4">Two Ways to Book:</h3>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- WhatsApp -->
+          <div class="border border-gold rounded-lg p-4">
+            <div class="text-gold text-4xl mb-3">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-2">Instant WhatsApp Booking</h4>
+            <p class="text-sm mb-4">Send photos of your design for immediate quote</p>
+            <a href="https://wa.me/919486639475" target="_blank" 
+               class="inline-block px-4 py-2 bg-gold text-white rounded-lg hover:bg-amber-700 transition">
+              Chat Now
+            </a>
+          </div>
+          
+          <!-- Visit -->
+          <div class="border border-gold rounded-lg p-4">
+            <div class="text-gold text-4xl mb-3">
+              <i class="fas fa-store"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-2">In-Shop Consultation</h4>
+            <p class="text-sm mb-4">Visit our Tirupathur location for personalized service</p>
+            <a href="https://maps.app.goo.gl/Nm7sJ81LF28E9ELu7" target="_blank" 
+               class="inline-block px-4 py-2 bg-gold text-white rounded-lg hover:bg-amber-700 transition">
+              Get Directions
+            </a>
+          </div>
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-gray-200">
+          <p class="text-sm text-gray-600">
+            <i class="fas fa-map-marker-alt text-gold mr-2"></i>
+            11, Arasamara Street, Opp. Kesavalu Reddy Complex, Tirupathur
+          </p>
+          <p class="text-sm text-gray-600 mt-2">
+            <i class="fas fa-phone-alt text-gold mr-2"></i>
+            +91 9486639475 (9:30AM-8:30PM)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="images/logo/logo.png" alt="New Queen Tailor Logo" class="h-16 w-auto">
+            <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+          </div>
+          <p class="text-gray-400 mb-6">Tirupathur's premier tailoring and embroidery specialists since 1999. Crafting perfection in every stitch.</p>
+          
+          <div class="flex space-x-4">
+            <a href="https://wa.me/919486639475" target="_blank" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="women.html" class="text-gray-400 hover:text-white transition">Women's Tailoring</a></li>
+            <li><a href="men.html" class="text-gray-400 hover:text-white transition">Men's Tailoring</a></li>
+            <li><a href="embroidery.html" class="text-gray-400 hover:text-white transition">Embroidery</a></li>
+            <li><a href="wedding.html" class="text-gray-400 hover:text-white transition">Wedding Collections</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Contact Us</h3>
+          <address class="not-italic text-gray-400">
+            <div class="flex items-start gap-3 mb-4">
+              <i class="fas fa-map-marker-alt mt-1 text-[#9D8140]"></i>
+              <div>
+                11, Arasamara Street<br>
+                Sivanar Street, Tirupathur – 635601<br>
+                <em class="text-sm">(Opp. Kesavalu Reddy Complex)</em>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fas fa-phone-alt text-[#9D8140]"></i>
+              <a href="tel:+916381568585" class="hover:text-white transition">+91 6381568585</a>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-[#9D8140]"></i>
+              <a href="https://wa.me/919486639475" target="_blank" class="hover:text-white transition">+91 9486639475</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>© 2025 New Queen Tailor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919486639475" target="_blank"
+    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+    title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <script>
+    function submitDesign() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const designType = document.getElementById('designType').value.trim();
+      const description = document.getElementById('designDescription').value.trim();
+
+      if (!name || !phone || !designType || !description) {
+        alert('Please fill all required fields marked with *');
+        return;
+      }
+
+      const phoneRegex = /^[6-9]\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid 10-digit Indian phone number');
+        return;
+      }
+
+      let message = `*Custom Embroidery Design Submission*%0A%0A`;
+      message += `*Name:* ${encodeURIComponent(name)}%0A`;
+      message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+      message += `*Garment Type:* ${encodeURIComponent(designType)}%0A%0A`;
+      message += `*Design Description:*%0A${encodeURIComponent(description)}%0A%0A`;
+      message += `_Please send your design images in this WhatsApp chat._`;
+
+      window.open(`https://wa.me/919486639475?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>

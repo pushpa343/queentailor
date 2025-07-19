@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order & Stitch | New Queen Tailor | Tirupathur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, rgba(93, 58, 155, 0.05) 0%, rgba(157, 129, 64, 0.05) 100%);
+    }
+    .hover-zoom {
+      transition: transform 0.3s ease;
+    }
+    .hover-zoom:hover {
+      transform: scale(1.02);
+    }
+    .process-step {
+      position: relative;
+      padding-left: 3rem;
+    }
+    .process-step:before {
+      content: attr(data-step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #9D8140;
+      color: white;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo/logo without bg.png" alt="Logo" class="h-20 w-auto" />
+      <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+    </div>
+    <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
+      <li><a href="index.html" class="hover:text-[#9D8140] transition">HOME</a></li>
+      <li><a href="women.html" class="hover:text-[#9D8140] transition">WOMEN</a></li>
+      <li><a href="men.html" class="hover:text-[#9D8140] transition">MEN</a></li>
+      <li><a href="embroidery.html" class="hover:text-[#9D8140] transition">EMBROIDERY</a></li>
+      <li><a href="order-and-stitch.html" class="text-[#9D8140] font-bold">ORDER & STITCH</a></li>
+      <li><a href="premium.html" class="hover:text-[#9D8140] transition">PREMIUM</a></li>
+      <li><a href="wedding.html" class="hover:text-[#9D8140] transition">WEDDING TAILORING</a></li>
+
+      <!-- CONTACT with dropdown -->
+      <li class="relative group">
+        <a href="#" class="hover:text-[#9D8140] transition">CONTACT</a>
+        <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-lg p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800">
+          <div>
+            <h4 class="font-bold mb-2">Contact Us</h4>
+            <p><strong>Call:</strong> +91 6381568585</p>
+            <p><strong>WhatsApp:</strong> +91 9486639475</p>
+            <a href="#" class="text-purple-600 block mt-2 hover:underline">Email us</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Tirupathur Store</h4>
+            <p>11, Arasamara Street,</p>
+            <p>Sivanar Street, Tirupathur – 635601</p>
+            <p><em>(Opp. Kesavalu Reddy Complex)</em></p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Visit Us</h4>
+            <img src="images\logo\tailor_app_banner.svg" class="w-32 h-24 object-cover rounded" />
+          </div>
+        </div>
+      </li>
+    </ul>
+    </nav>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 text-center gradient-bg">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#5D3A9B] mb-6">Remote Order & Stitching Service</h1>
+      <p class="text-xl text-gray-700 mb-8">Get perfectly stitched outfits without visiting our store - order online and ship directly to us!</p>
+      <a href="#process" class="inline-flex items-center gap-2 px-8 py-3 bg-[#9D8140] text-white text-lg font-semibold rounded-full hover:bg-amber-700 transition shadow-lg">
+        How It Works <i class="fas fa-arrow-down"></i>
+      </a>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+  </section>
+
+  <!-- Online Shopping Partners -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4">Shop From Any Platform</h2>
+        <div class="w-24 h-1 bg-[#9D8140] mx-auto"></div>
+        <p class="mt-4 text-gray-600">Order from your favorite shopping sites and ship directly to us</p>
+      </div>
+      
+      <img src="images/clickable guesters/online shopping.webp"
+           alt="Shop From Any Site"
+           class="w-full max-w-4xl mx-auto rounded-xl shadow-lg hover-zoom" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-16 gradient-bg">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4">How It Works</h2>
+        <div class="w-24 h-1 bg-[#9D8140] mx-auto"></div>
+      </div>
+      
+      <div class="space-y-8">
+        <!-- Step 1 -->
+        <div class="process-step bg-white p-6 rounded-xl shadow-md hover-zoom" data-step="1">
+          <h3 class="text-xl font-bold text-[#5D3A9B] mb-3">Order Online</h3>
+          <p class="text-gray-700">Buy any outfit from websites like Amazon, Myntra, Meesho, Ajio, etc., and ship it directly to our store address:</p>
+          <div class="mt-4 bg-gray-100 p-4 rounded-lg">
+            <p class="font-semibold text-[#5D3A9B]">New Queen Tailor</p>
+            <p>11, Arasamara Street, Sivanar Street</p>
+            <p>Tirupathur – 635601 (Opp. Kesavalu Reddy Complex)</p>
+            <p class="text-sm text-gray-500 mt-2">📌 Plus Code: FHR8+FW Tirupathur</p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step bg-white p-6 rounded-xl shadow-md hover-zoom" data-step="2">
+          <h3 class="text-xl font-bold text-[#5D3A9B] mb-3">Contact Us Immediately</h3>
+          <p class="text-gray-700">After placing your order, contact us via WhatsApp to:</p>
+          <ul class="list-disc pl-6 mt-2 space-y-1 text-gray-700">
+            <li>Confirm delivery tracking</li>
+            <li>Discuss measurement method</li>
+            <li>Finalize stitching plan</li>
+            <li>Share your order screenshot</li>
+          </ul>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step bg-white p-6 rounded-xl shadow-md hover-zoom" data-step="3">
+          <h3 class="text-xl font-bold text-[#5D3A9B] mb-3">Choose Measurement Method</h3>
+          <div class="grid md:grid-cols-3 gap-4 mt-4">
+            <div class="bg-gray-50 p-4 rounded-lg border border-[#9D8140]/20">
+              <h4 class="font-bold text-[#5D3A9B] mb-2"><i class="fas fa-box-open text-[#9D8140] mr-2"></i> Send Fitting Dress</h4>
+              <p class="text-sm">Courier us a perfectly fitting dress for measurements</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg border border-[#9D8140]/20">
+              <h4 class="font-bold text-[#5D3A9B] mb-2"><i class="fas fa-home text-[#9D8140] mr-2"></i> Home Measurement</h4>
+              <p class="text-sm">We collect measurements at your home (extra charge)</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg border border-[#9D8140]/20">
+              <h4 class="font-bold text-[#5D3A9B] mb-2"><i class="fas fa-mobile-alt text-[#9D8140] mr-2"></i> WhatsApp Guidance</h4>
+              <p class="text-sm">We guide you manually via WhatsApp for measurements</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step bg-white p-6 rounded-xl shadow-md hover-zoom" data-step="4">
+          <h3 class="text-xl font-bold text-[#5D3A9B] mb-3">Payment & Confirmation</h3>
+          <p class="text-gray-700"><span class="font-bold">Full advance payment required.</span> <span class="text-red-600 font-semibold">Cash on Delivery (COD) is not allowed.</span></p>
+          <p class="mt-2 text-gray-700">After payment confirmation, we'll begin stitching and inform you about the expected delivery date.</p>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="https://wa.me/919486639475" target="_blank"
+           class="inline-flex items-center gap-2 px-8 py-3 bg-green-600 text-white text-lg font-semibold rounded-full hover:bg-green-700 transition shadow-lg">
+          <i class="fab fa-whatsapp"></i> Start Your Order on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Important Notes -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+        <h3 class="text-xl font-bold text-red-700 mb-4 flex items-center">
+          <i class="fas fa-exclamation-triangle mr-2"></i> Important Notes
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li><strong>Parcel Responsibility:</strong> All risks (transit, delivery, return) are the customer's responsibility. We are not liable for any loss or damage caused by the courier.</li>
+          <li><strong>Secure Packaging:</strong> Ensure parcels are packed securely to prevent damage during transit.</li>
+          <li><strong>Tracking Information:</strong> Always share your tracking number with us immediately after ordering.</li>
+          <li><strong>Communication:</strong> Maintain regular contact via WhatsApp for updates on your order.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="py-16 gradient-bg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4">Our Location</h2>
+        <div class="w-24 h-1 bg-[#9D8140] mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-1">
+          <a href="https://maps.app.goo.gl/nq16RCFgqkKE98JaA" target="_blank" class="block hover-zoom">
+            <img src="images/location.webp" alt="Find Us on Google Maps"
+                 class="w-full rounded-lg shadow-lg">
+          </a>
+          <p class="mt-2 text-center text-sm text-gray-500">Click the map to open directions on Google Maps</p>
+        </div>
+        
+        <div class="order-2">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-[#5D3A9B] mb-4">New Queen Tailor</h3>
+            <address class="not-italic text-gray-700 space-y-3">
+              <p class="flex items-start">
+                <i class="fas fa-map-marker-alt text-[#9D8140] mt-1 mr-3"></i>
+                <span>11, Arasamara Street, Opposite to Kesavalu Reddy Complex<br>
+                Tirupathur, Tamil Nadu 635601</span>
+              </p>
+              <p class="flex items-center">
+                <i class="fas fa-clock text-[#9D8140] mr-3"></i>
+                <span><strong>Timings:</strong> 9:00 AM - 10:00 PM (Daily)</span>
+              </p>
+              <p class="flex items-center">
+                <i class="fas fa-phone-alt text-[#9D8140] mr-3"></i>
+                <a href="tel:+919486639475" class="hover:text-[#5D3A9B]">+91 9486639475</a>
+              </p>
+              <p class="flex items-center">
+                <i class="fab fa-whatsapp text-[#9D8140] mr-3"></i>
+                <a href="https://wa.me/919486639475" target="_blank" class="hover:text-[#5D3A9B]">Chat on WhatsApp</a>
+              </p>
+              <p class="flex items-center">
+                <i class="fas fa-map-pin text-[#9D8140] mr-3"></i>
+                <span><strong>Plus Code:</strong> FHR8+FW Tirupathur</span>
+              </p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="images/logo/logo.png" alt="New Queen Tailor Logo" class="h-16 w-auto">
+            <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+          </div>
+          <p class="text-gray-400 mb-6">Tirupathur's premier tailoring and embroidery specialists since 1999. Crafting perfection in every stitch.</p>
+          
+          <div class="flex space-x-4">
+            <a href="https://wa.me/919486639475" target="_blank" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="women.html" class="text-gray-400 hover:text-white transition">Women's Tailoring</a></li>
+            <li><a href="men.html" class="text-gray-400 hover:text-white transition">Men's Tailoring</a></li>
+            <li><a href="embroidery.html" class="text-gray-400 hover:text-white transition">Embroidery</a></li>
+            <li><a href="wedding.html" class="text-gray-400 hover:text-white transition">Wedding Collections</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Contact Us</h3>
+          <address class="not-italic text-gray-400">
+            <div class="flex items-start gap-3 mb-4">
+              <i class="fas fa-map-marker-alt mt-1 text-[#9D8140]"></i>
+              <div>
+                11, Arasamara Street<br>
+                Sivanar Street, Tirupathur – 635601<br>
+                <em class="text-sm">(Opp. Kesavalu Reddy Complex)</em>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fas fa-phone-alt text-[#9D8140]"></i>
+              <a href="tel:+916381568585" class="hover:text-white transition">+91 6381568585</a>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-[#9D8140]"></i>
+              <a href="https://wa.me/919486639475" target="_blank" class="hover:text-white transition">+91 9486639475</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>© 2025 New Queen Tailor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919486639475" target="_blank"
+    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+    title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <script>
+    function submitDesign() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const designType = document.getElementById('designType').value.trim();
+      const description = document.getElementById('designDescription').value.trim();
+
+      if (!name || !phone || !designType || !description) {
+        alert('Please fill all required fields marked with *');
+        return;
+      }
+
+      const phoneRegex = /^[6-9]\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid 10-digit Indian phone number');
+        return;
+      }
+
+      let message = `*Custom Embroidery Design Submission*%0A%0A`;
+      message += `*Name:* ${encodeURIComponent(name)}%0A`;
+      message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+      message += `*Garment Type:* ${encodeURIComponent(designType)}%0A%0A`;
+      message += `*Design Description:*%0A${encodeURIComponent(description)}%0A%0A`;
+      message += `_Please send your design images in this WhatsApp chat._`;
+
+      window.open(`https://wa.me/919486639475?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>

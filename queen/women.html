@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Women's Collection | New Queen Tailor</title>
+  <link rel="icon" type="image/png" href="images/logo/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    .category-img {
+      @apply w-full h-auto object-cover rounded-xl shadow-lg transition-all duration-500;
+      min-height: 400px;
+    }
+    .category-img:hover {
+      @apply shadow-xl scale-[1.02];
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+    }
+    .popup-content {
+      @apply bg-white p-8 rounded-xl max-w-lg w-full mx-4;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #9D8140 0%, #C9A845 100%);
+    }
+    .royal-gradient {
+      background: linear-gradient(135deg, #5D3A9B 0%, #7E57C2 100%);
+    }
+    .section-divider {
+      @apply w-24 h-1 mx-auto my-8;
+      background: linear-gradient(90deg, #9D8140 0%, #5D3A9B 100%);
+    }
+    .floating-btn {
+      @apply fixed bottom-6 right-6 z-50 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#F8F2EA] to-white text-gray-800">
+
+  <!-- Header -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo/logo without bg.png" alt="New Queen Tailor Logo" class="h-20 w-auto" />
+      <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide font-serif">NEW QUEEN TAILOR</span>
+    </div>
+    <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
+      <li><a href="index.html" class="hover:text-[#9D8140] transition">HOME</a></li>
+      <li><a href="women.html" class="text-[#9D8140] border-b-2 border-[#9D8140]">WOMEN</a></li>
+      <li><a href="men.html" class="hover:text-[#9D8140] transition">MEN</a></li>
+      <li><a href="embroidery.html" class="hover:text-[#9D8140] transition">EMBROIDERY</a></li>
+      <li><a href="order-and-stitch.html" class="hover:text-[#9D8140] transition">ORDER & STITCH</a></li>
+      <li><a href="premium.html" class="hover:text-[#9D8140] transition">PREMIUM</a></li>
+      <li><a href="wedding.html" class="hover:text-[#9D8140] transition">WEDDING TAILORING</a></li>
+      <li class="relative group">
+        <a href="#" class="hover:text-[#9D8140] transition">CONTACT</a>
+        <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-xl p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800 border border-[#9D8140]/20">
+          <div>
+            <h4 class="font-bold mb-2 text-[#5D3A9B]">Contact Us</h4>
+            <p><strong>Call:</strong> +91 6381568585</p>
+            <p><strong>WhatsApp:</strong> +91 9486639475</p>
+            <a href="#" class="text-[#9D8140] block mt-2 hover:underline">Email us</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2 text-[#5D3A9B]">Tirupathur Store</h4>
+            <p>11, Arasamara Street,</p>
+            <p>Sivanar Street, Tirupathur – 635601</p>
+            <p class="text-sm italic">(Opp. Kesavalu Reddy Complex)</p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2 text-[#5D3A9B]">Visit Us</h4>
+            <img src="images/logo/tailor_app_banner.svg" alt="Store location" class="w-32 h-24 object-cover rounded border border-[#9D8140]/20" />
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="flex items-center space-x-4">
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative py-24 bg-gradient-to-r from-[#9D8140]/10 to-[#5D3A9B]/10 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('images/pattern.svg')] bg-repeat"></div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#5D3A9B] mb-6 font-serif">Elegant Women's Collection</h1>
+      <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Exquisite craftsmanship for the modern woman. Custom-tailored garments that celebrate femininity and tradition.</p>
+      <div class="inline-flex gap-4">
+        <a href="#blouse" class="px-6 py-3 bg-[#5D3A9B] text-white rounded-lg hover:bg-[#7E57C2] transition shadow-lg">Explore Collections</a>
+        <a href="tel:+919486639475" class="px-6 py-3 border-2 border-[#5D3A9B] text-[#5D3A9B] rounded-lg hover:bg-[#5D3A9B]/10 transition shadow-lg">Book Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 space-y-28">
+
+      <!-- Dress 1 - Blouse -->
+      <div id="blouse" class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <img src="images/women/blouse/blousefirst111.jpeg" alt="Premium Blouse Designs" class="category-img">
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">TRADITIONAL ELEGANCE</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Blouses</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Elegant and timeless, our blouses feature tailored seams that create a flattering silhouette. Each piece is meticulously crafted with premium fabrics and precise stitching for perfect drape and comfort.</p>
+          
+          <button onclick="toggleMore('more1', this)" class="flex items-center gap-2 text-sm text-[#9D8140] font-semibold hover:underline mb-6 focus:outline-none transition">
+            <span>View Variations</span>
+            <svg id="icon-more1" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div id="more1" class="hidden space-y-8 transition-all duration-500 ease-in-out">
+
+            <!-- Variation 1 - Princess Cut -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/PrincessCutwithPuffSleeve.jpeg" alt="Princess Cut Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Princess Cut</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">A timeless classic featuring a flattering, sharply contoured front cut that enhances the bust and lends effortless shape. Suitable for all sarees.</p>
+                <button onclick="showPopup('Princess Cut Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 2 - Boat Neck -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/BoatNeckwithBowTieBac.jpeg" alt="Boat Neck Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Boat Neck</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Defined by its wide, horizontal neckline that gently skims the collarbones, bringing a modern twist to traditional attire.</p>
+                <button onclick="showPopup('Boat Neck Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 3 - Elbow Sleeve -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/3.ElbowSleevewithU-Nec.jpeg" alt="Elbow Sleeve Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Elbow Sleeve</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Features sleeves that end just below the elbow, offering a graceful and sophisticated look. Ideal for formal events.</p>
+                <button onclick="showPopup('Elbow Sleeve Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 4 - Puff Sleeve -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/PrincessCutwithPuffSleeve.jpeg" alt="Puff Sleeve Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Puff Sleeve</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Youthful and vintage-inspired, featuring sleeves that gather at the shoulder and wrist for a voluminous, romantic flair.</p>
+                <button onclick="showPopup('Puff Sleeve Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 5 - High Neck -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/HighNeckCollarwithKeyhol.jpeg" alt="High Neck Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">High Neck</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">With its elevated neckline covering the collarbone, this blouse exudes sophistication and modesty while highlighting the neck.</p>
+                <button onclick="showPopup('High Neck Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 6 - Backless V-Cut -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/BacklessV-CutwithDori1.jpeg" alt="Backless V-Cut Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Backless V-Cut</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">A bold choice showcasing an open back with creative tie-ups or embellishments, perfect for making a statement at festive events.</p>
+                <button onclick="showPopup('Backless V-Cut Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 7 - Embroidered -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/EmbroideredFullSleeveNetBlous.jpeg" alt="Embroidered Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Embroidered</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Adorned with intricate embroidery, this blouse is a celebration of craftsmanship and detail for weddings and grand occasions.</p>
+                <button onclick="showPopup('Embroidered Blouse')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 8 - Custom -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/blouse/cantfindyou.jpeg" alt="Custom Blouse" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Customize Your Own</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Create your perfect blouse with our bespoke design service. Share your unique ideas and our expert tailors will bring your vision to life.</p>
+                <button onclick="showPopup('Custom Blouse')" class="px-6 py-3 bg-[#5D3A9B] text-white rounded-lg hover:bg-[#7E57C2] transition shadow-lg">Customize Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Dress 2 - Kurthi -->
+      <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">VERSATILE STYLES</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Kurthis</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Discover our exclusive collection of Kurthis, thoughtfully tailored to embody the perfect balance of tradition, comfort, and modern flair. Each design celebrates feminine grace with contemporary touches.</p>
+          
+          <button onclick="toggleMore('more2', this)" class="flex items-center gap-2 text-sm text-[#9D8140] font-semibold hover:underline mb-6 focus:outline-none transition">
+            <span>View Variations</span>
+            <svg id="icon-more2" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div id="more2" class="hidden space-y-8 transition-all duration-500 ease-in-out">
+
+            <!-- Variation 1 - Straight Cut -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/straightcutkurth.jpeg" alt="Straight Cut Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Straight Cut</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">A sleek, straight-line silhouette that offers timeless simplicity and grace. Easy to style for work or everyday outings.</p>
+                <button onclick="showPopup('Straight Cut Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 2 - A-Line -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/A-linekurth.jpeg" alt="A-Line Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">A-Line</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Flattering on all figures, this kurthi flares gently from the bust for a feminine, easy-to-wear shape.</p>
+                <button onclick="showPopup('A-Line Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 3 - Anarkali -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/Anarkali-stylekurt.jpeg" alt="Anarkali Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Anarkali</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Showcasing a fitted top and wide, flaring hem, adding a regal touch perfect for celebrations.</p>
+                <button onclick="showPopup('Anarkali Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 4 - Angrakha -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/Angrakhakurth.jpeg" alt="Angrakha Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Angrakha</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Featuring a distinct cross-over front panel tied at the side, bringing Mughal-era elegance and a stylish layered look.</p>
+                <button onclick="showPopup('Angrakha Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 5 - High-Low -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/highlow.jpg" alt="High-Low Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">High-Low</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">With a stylish hemline that's shorter in front and longer at the back, offering a touch of modern flair.</p>
+                <button onclick="showPopup('High-Low Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 6 - Empire Waist -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/EmpireWaistKurthi.jpg" alt="Empire Waist Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Empire Waist</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Fitted bodice ending just below the bust, flowing into a relaxed bottom for added comfort and graceful silhouette.</p>
+                <button onclick="showPopup('Empire Waist Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 7 - Kaftan Style -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/KaftanStyleKurthi.jpg" alt="Kaftan Style Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Kaftan Style</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Inspired by traditional kaftans, featuring loose, flowing fabric for a relaxed yet fashionable statement.</p>
+                <button onclick="showPopup('Kaftan Style Kurthi')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 8 - Custom -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/kurthi/cantfind.jpg" alt="Custom Kurthi" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Customize Your Own</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Bring your ideas to life! Share your custom design preferences, and our expert tailors will create a one-of-a-kind kurthi.</p>
+                <button onclick="showPopup('Custom Kurthi')" class="px-6 py-3 bg-[#5D3A9B] text-white rounded-lg hover:bg-[#7E57C2] transition shadow-lg">Customize Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="images/women/Gemini_Generated_Image_1ikby81ikby81ik.jpeg" alt="Premium Kurthi Designs" class="category-img">
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Dress 3 - Lehengas -->
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <img src="images/women/Lehenga.jpeg" alt="Luxury Lehenga Collection" class="category-img">
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">ROYAL COLLECTION</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Lehengas</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Step into timeless elegance with our curated collection of South Indian Lehengas, impeccably crafted for both festive grandeur and modern sophistication. Each piece tells a story of tradition and craftsmanship.</p>
+          
+          <button onclick="toggleMore('more3', this)" class="flex items-center gap-2 text-sm text-[#9D8140] font-semibold hover:underline mb-6 focus:outline-none transition">
+            <span>View Variations</span>
+            <svg id="icon-more3" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div id="more3" class="hidden space-y-8 transition-all duration-500 ease-in-out">
+
+            <!-- Variation 1 - Traditional Silk -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/TraditionalSilkPattuPavadaiLehenga.jpg" alt="Traditional Silk Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Traditional Silk</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Luxurious Kanchipuram silk in striking hues, highlighted by gleaming zari woven borders and motifs. Perfect for festive grandeur.</p>
+                <button onclick="showPopup('Traditional Silk Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 2 - Kalamkari -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/KalamkariLehenga.jpg" alt="Kalamkari Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Kalamkari</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Hand-painted with mythological and floral stories, each piece is a wearable work of art celebrating South India's rich craft legacy.</p>
+                <button onclick="showPopup('Kalamkari Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 3 - Handloom Cotton -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/HandloomCottonLehenga.jpg" alt="Handloom Cotton Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Handloom Cotton</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Light, breathable, and adorned with simple handwork or traditional prints. Perfect for poojas and relaxed celebrations.</p>
+                <button onclick="showPopup('Handloom Cotton Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 4 - Banarasi -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/BanarasiSilkLehenga.jpg" alt="Banarasi Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Banarasi</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">A timeless statement with heavy gold-work and ornate patterns, embodying royalty and opulence for special occasions.</p>
+                <button onclick="showPopup('Banarasi Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 5 - Organza -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/OrganzaLehenga.jpg" alt="Organza Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Organza</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Soft, sheer organza with gentle shimmer, offering a breezy, contemporary look ideal for celebrations.</p>
+                <button onclick="showPopup('Organza Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 6 - Kota/Chanderi -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/KotaChanderiLehenga.jpg" alt="Kota/Chanderi Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Kota/Chanderi</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Delicate and lightweight, featuring unique woven patterns—silver zari or raw silk—ideal for festivals.</p>
+                <button onclick="showPopup('Kota/Chanderi Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 7 - Floral/Digital Print -->
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/FloralDigitalPrintLehenga.jpg" alt="Floral/Digital Print Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Floral/Digital Print</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Vibrant prints or embroidery on georgette, silk, or cotton for a playful, fashion-forward twist.</p>
+                <button onclick="showPopup('Floral/Digital Print Lehenga')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book This Style</button>
+              </div>
+            </div>
+
+            <!-- Variation 8 - Custom -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+              <div class="w-full md:w-1/2">
+                <img src="images/women/leganga/CustomizeYourOwnLehenga.jpg" alt="Custom Lehenga" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Customize Your Own</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Share your dream design and fabrics—our skilled artisans will make a one-of-a-kind lehenga just for you.</p>
+                <button onclick="showPopup('Custom Lehenga')" class="px-6 py-3 bg-[#5D3A9B] text-white rounded-lg hover:bg-[#7E57C2] transition shadow-lg">Customize Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Additional Dress Categories -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Skirt -->
+        <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+          <div class="w-full md:w-1/2">
+            <h2 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Skirts</h2>
+            <p class="mb-6 text-gray-600 leading-relaxed">Flowy, flared, or fishtail — our skirts come in beautiful patterns and lengths that suit both modern and ethnic occasions.</p>
+            <button onclick="showPopup('Skirt')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img src="images/women/SK.jpeg" alt="Skirt Designs" class="category-img">
+          </div>
+        </div>
+
+        <!-- Top -->
+        <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition">
+          <div class="w-full md:w-1/2">
+            <img src="images/women/top.jpeg" alt="Top Designs" class="category-img">
+          </div>
+          <div class="w-full md:w-1/2">
+            <h2 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Tops</h2>
+            <p class="mb-6 text-gray-600 leading-relaxed">From peplums to crop tops, we stitch all styles that suit your personality. Pair with jeans, lehengas, or skirts.</p>
+            <button onclick="showPopup('Top')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Ready-To-Wear Saree -->
+        <div class="flex flex-col-reverse md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-md border border-[#9D8140]/20 hover:shadow-lg transition md:col-span-2">
+          <div class="w-full md:w-1/2">
+            <h2 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Ready-To-Wear Sarees</h2>
+            <p class="mb-6 text-gray-600 leading-relaxed">Say goodbye to complex draping! These pre-stitched sarees are easy to slip on and give you that perfect pleated look in seconds.</p>
+            <button onclick="showPopup('Ready-To-Wear Saree')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img src="images/women/sare.jpeg" alt="Ready-To-Wear Saree" class="category-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Section -->
+  <section class="py-20 royal-gradient text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 font-serif">Ready for Your Perfect Fit?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Book a consultation with our master tailors today and experience premium tailoring like never before.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="tel:+919486639475" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#5D3A9B] text-lg font-bold rounded-full hover:bg-gray-100 transition shadow-xl transform hover:scale-105">
+          <i class="fas fa-phone-alt"></i> Call for Appointment
+        </a>
+        <a href="https://wa.me/919486639475" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#9D8140] text-white text-lg font-bold rounded-full hover:bg-[#C9A845] transition shadow-xl transform hover:scale-105">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+      <p class="mt-8 text-sm opacity-90">11, Arasamara Street, Tirupathur | Open 9:30AM-10:00PM</p>
+    </div>
+  </section>
+
+  <!-- Popup Form -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <button onclick="hidePopup()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <h3 class="text-2xl font-bold text-[#5D3A9B] mb-6 font-serif" id="popup-title">Book Your Design</h3>
+      <form id="booking-form" onsubmit="submitForm(event)">
+        <input type="hidden" id="selected-design">
+        <div class="mb-6">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+          <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]" required>
+        </div>
+        <div class="mb-6">
+          <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+          <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]" required>
+        </div>
+        <div class="mb-6">
+          <label for="event-date" class="block text-gray-700 text-sm font-bold mb-2">Event Date (if applicable)</label>
+          <input type="date" id="event-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]">
+        </div>
+        <div class="mb-6">
+          <label for="details" class="block text-gray-700 text-sm font-bold mb-2">Special Requests</label>
+          <textarea id="details" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]"></textarea>
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button type="button" onclick="hidePopup()" class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">Cancel</button>
+          <button type="submit" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-md">Submit Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919486639475" target="_blank" class="floating-btn" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="images/logo/logo.png" alt="New Queen Tailor Logo" class="h-12 w-auto" />
+            <span class="text-xl font-bold text-[#9D8140] font-serif">NEW QUEEN TAILOR</span>
+          </div>
+          <p class="text-sm opacity-80 mb-4">Tirupathur's premier tailoring service specializing in women's fashion and traditional wear.</p>
+          <div class="flex space-x-4">
+          <a href="#" class="text-[#9D8140] hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-[#9D8140] font-bold mb-4 font-serif">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Home</a></li>
+            <li><a href="women.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Women's Collection</a></li>
+            <li><a href="wedding.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Wedding Tailoring</a></li>
+            <li><a href="premium.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Premium Services</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-[#9D8140] font-bold mb-4 font-serif">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="blouse.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Blouses</a></li>
+            <li><a href="kurthi.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Kurthis</a></li>
+            <li><a href="lehenga.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Lehengas</a></li>
+            <li><a href="embroidery.html" class="opacity-80 hover:opacity-100 hover:text-[#9D8140] transition">Embroidery</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-[#9D8140] font-bold mb-4 font-serif">Contact</h4>
+          <address class="not-italic text-sm opacity-80 space-y-3">
+            <p class="flex items-start">
+              <i class="fas fa-map-marker-alt text-[#9D8140] mt-1 mr-3"></i>
+              <span>11, Arasamara Street<br>Opposite Kesavalu Reddy Complex<br>Tirupathur, TN 635601</span>
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-phone-alt text-[#9D8140] mr-3"></i>
+              <a href="tel:+919486639475" class="hover:text-[#9D8140]">+91 9486639475</a>
+            </p>
+            <p class="flex items-center">
+              <i class="fas fa-envelope text-[#9D8140] mr-3"></i>
+              <a href="mailto:info@newqueentailor.com" class="hover:text-[#9D8140]">info@newqueentailor.com</a>
+            </p>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-sm opacity-80">© 2025 New Queen Tailor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle more content
+    function toggleMore(id, btn) {
+      const section = document.getElementById(id);
+      const icon = document.getElementById("icon-" + id);
+      section.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+      
+      // Update button text
+      const span = btn.querySelector('span');
+      span.textContent = section.classList.contains('hidden') ? 'View Variations' : 'Hide Variations';
+      
+      // Smooth scroll to show the expanded content
+      if (!section.classList.contains('hidden')) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    // Popup functionality
+    function showPopup(design) {
+      document.getElementById('selected-design').value = design;
+      document.getElementById('popup-title').textContent = `Book: ${design}`;
+      document.getElementById('popup').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
+    }
+
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('booking-form').reset();
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const eventDate = document.getElementById('event-date').value;
+      const details = document.getElementById('details').value.trim();
+      const design = document.getElementById('selected-design').value;
+
+      const message = `*New Tailoring Booking Request*\n\n` +
+                      `*Customer Name:* ${name}\n` +
+                      `*Phone Number:* ${phone}\n` +
+                      `*Design Type:* ${design}\n` +
+                      `${eventDate ? `*Event Date:* ${eventDate}\n` : ''}` +
+                      `*Special Requests:* ${details || 'None'}`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/919486639475?text=${encodedMessage}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappURL, '_blank');
+      
+      // Show confirmation message
+      alert("Thank you for your booking request! You'll be redirected to WhatsApp to complete your booking.");
+      
+      // Hide the popup
+      hidePopup();
+      
+      // Reset the form
+      document.getElementById('booking-form').reset();
+    }
+
+    // Close popup when clicking outside
+    document.getElementById('popup').addEventListener('click', function(e) {
+      if (e.target === this) {
+        hidePopup();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men's Collection | New Queen Tailor</title>
+  <link rel="icon" type="image/png" href="images/logo/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    .category-img {
+      @apply w-full h-auto object-cover rounded-xl shadow-lg transition-all duration-500;
+      min-height: 400px;
+    }
+    .category-img:hover {
+      @apply shadow-xl scale-[1.02];
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+    }
+    .popup-content {
+      @apply bg-white p-8 rounded-xl max-w-lg w-full mx-4;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #9D8140 0%, #C9A845 100%);
+    }
+    .royal-gradient {
+      background: linear-gradient(135deg, #5D3A9B 0%, #7E57C2 100%);
+    }
+    .section-divider {
+      @apply w-24 h-1 mx-auto my-8;
+      background: linear-gradient(90deg, #9D8140 0%, #5D3A9B 100%);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#F8F2EA] to-white text-gray-800">
+
+  <!-- Header -->
+  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo/logo without bg.png" alt="New Queen Tailor Logo" class="h-20 w-auto" />
+      <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide font-serif">NEW QUEEN TAILOR</span>
+    </div>
+    <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
+      <li><a href="index.html" class="hover:text-[#9D8140] transition">HOME</a></li>
+      <li><a href="women.html" class="hover:text-[#9D8140] transition">WOMEN</a></li>
+      <li><a href="men.html" class="text-[#9D8140] border-b-2 border-[#9D8140]">MEN</a></li>
+      <li><a href="embroidery.html" class="hover:text-[#9D8140] transition">EMBROIDERY</a></li>
+      <li><a href="order-and-stitch.html" class="hover:text-[#9D8140] transition">ORDER & STITCH</a></li>
+      <li><a href="premium.html" class="hover:text-[#9D8140] transition">PREMIUM</a></li>
+      <li><a href="wedding.html" class="hover:text-[#9D8140] transition">WEDDING TAILORING</a></li>
+      <li class="relative group">
+        <a href="#" class="hover:text-[#9D8140] transition">CONTACT</a>
+        <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-xl p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800 border border-[#9D8140]/20">
+          <div>
+            <h4 class="font-bold mb-2 text-[#5D3A9B]">Contact Us</h4>
+            <p><strong>Call:</strong> +91 6381568585</p>
+            <p><strong>WhatsApp:</strong> +91 9486639475</p>
+            <a href="#" class="text-[#9D8140] block mt-2 hover:underline">Email us</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2 text-[#5D3A9B]">Tirupathur Store</h4>
+            <p>11, Arasamara Street,</p>
+            <p>Sivanar Street, Tirupathur – 635601</p>
+            <p class="text-sm italic">(Opp. Kesavalu Reddy Complex)</p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2 text-[#5D3A9B]">Visit Us</h4>
+            <img src="images/logo/tailor_app_banner.svg" alt="Store location" class="w-32 h-24 object-cover rounded border border-[#9D8140]/20" />
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="flex items-center space-x-4">
+     </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative py-24 bg-gradient-to-r from-[#9D8140]/10 to-[#5D3A9B]/10 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('images/pattern.svg')] bg-repeat"></div>
+    <div class="max-w-6xl mx-auto px-4 text-center relative">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#5D3A9B] mb-6 font-serif">Men's Tailoring Collection</h1>
+      <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Exquisite craftsmanship for the modern gentleman. Custom-tailored garments that combine tradition with contemporary style.</p>
+      <div class="inline-flex gap-4">
+        <a href="#shirts" class="px-6 py-3 bg-[#5D3A9B] text-white rounded-lg hover:bg-[#7E57C2] transition shadow-lg">Explore Collections</a>
+        <a href="tel:+919486639475" class="px-6 py-3 border-2 border-[#5D3A9B] text-[#5D3A9B] rounded-lg hover:bg-[#5D3A9B]/10 transition shadow-lg">Call for Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 space-y-28">
+
+      <!-- Dress 1 - Shirts -->
+      <div id="shirts" class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <img src="images/men/shirt main.jpg" alt="Premium Shirt Designs" class="category-img">
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">PREMIUM COLLECTION</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Shirts</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Custom-tailored shirts designed for every occasion – from professional formal wear to relaxed casual styles that express your personality. Each piece is meticulously crafted with premium fabrics and precise stitching.</p>
+          
+          <button onclick="toggleMore('more1', this)" class="flex items-center gap-2 text-sm text-[#9D8140] font-semibold hover:underline mb-6 focus:outline-none transition">
+            <span>View Designs</span>
+            <svg id="icon-more1" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div id="more1" class="hidden space-y-12 mt-6 transition-all duration-500 ease-in-out">
+
+            <!-- Variation 1 - Formal Shirt -->
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="w-full md:w-1/2">
+                <img src="images/categories for boys/formal.webp" alt="Formal Shirt Designs" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Formal Shirt</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Sharp collars, cuffs, and clean cuts for an executive look. Perfect for office and interviews. Available in premium cotton and linen blends.</p>
+                <button onclick="showPopup('Formal Shirt')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+              </div>
+            </div>
+
+            <!-- Variation 2 - Casual Shirt -->
+            <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Casual Shirt</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Laid-back and trendy with playful prints or checks. Ideal for weekends and outings. Choose from breathable fabrics for all seasons.</p>
+                <button onclick="showPopup('Casual Shirt')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+              </div>
+              <div class="w-full md:w-1/2">
+                <img src="images/categories for boys/casual.jpg" alt="Casual Shirt Designs" class="category-img">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Dress 2 - Pants -->
+      <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">COMFORT & STYLE</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Pants</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Tailored to perfection, our pants offer unmatched fit and comfort — from boardroom-ready formals to easy-going casuals. Experience the perfect balance of style and functionality.</p>
+          
+          <button onclick="toggleMore('more2', this)" class="flex items-center gap-2 text-sm text-[#9D8140] font-semibold hover:underline mb-6 focus:outline-none transition">
+            <span>View Designs</span>
+            <svg id="icon-more2" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div id="more2" class="hidden space-y-12 mt-6 transition-all duration-500 ease-in-out">
+
+            <!-- Variation 1 - Formal Pants -->
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="w-full md:w-1/2">
+                <img src="images/men/phant.jpeg" alt="Formal Pants" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Formal Pants</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Sharp lines and structured fit for a clean professional look. Ideal for office or formal events. Available in wool blends and premium polyester.</p>
+                <button onclick="showPopup('Formal Pants')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+              </div>
+            </div>
+
+            <!-- Variation 2 - Casual Pants -->
+            <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Casual Pants</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Easy-fit chinos and relaxed cuts made for comfort and weekend-ready style. Perfect for casual outings and travel.</p>
+                <button onclick="showPopup('Casual Pants')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+              </div>
+              <div class="w-full md:w-1/2">
+                <img src="images/men/casual pant (1).jpg" alt="Casual Pants" class="category-img">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="images/men/phant.jpeg" alt="Premium Pant Designs" class="category-img">
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Dress 3 - Kurta -->
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <img src="images/categories for boys/kurta.webp" alt="Designer Kurta Collection" class="category-img">
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">TRADITIONAL ELEGANCE</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Kurtas</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Traditional and modern kurtas tailored for comfort and elegance. Perfect for everyday wear or festive celebrations. Our kurtas blend traditional craftsmanship with contemporary designs.</p>
+          
+          <button onclick="toggleMore('more3', this)" class="flex items-center gap-2 text-sm text-[#9D8140] font-semibold hover:underline mb-6 focus:outline-none transition">
+            <span>View Designs</span>
+            <svg id="icon-more3" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div id="more3" class="hidden space-y-12 mt-6 transition-all duration-500 ease-in-out">
+
+            <!-- Variation 1 - Regular Kurta -->
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="w-full md:w-1/2">
+                <img src="images/men/regularkurthasample.jpg" alt="Regular Kurta" class="category-img">
+              </div>
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Regular Kurta</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Classic straight-cut kurta with comfortable fit for daily wear and casual occasions. Available in cotton and linen fabrics.</p>
+                <button onclick="showPopup('Regular Kurta')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+              </div>
+            </div>
+
+            <!-- Variation 2 - Designer Kurta -->
+            <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+              <div class="w-full md:w-1/2">
+                <h3 class="text-2xl font-bold text-[#5D3A9B] mb-3 font-serif">Designer Kurta</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Elegant kurtas with intricate embroidery and premium fabrics for festive occasions. Custom designs available for weddings and special events.</p>
+                <button onclick="showPopup('Designer Kurta')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+              </div>
+              <div class="w-full md:w-1/2">
+                <img src="images/men/designerkurta.jpg" alt="Designer Kurta" class="category-img">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider"></div>
+
+      <!-- Dress 4 - Sherwani -->
+      <div class="flex flex-col-reverse md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-1 bg-[#9D8140] mr-4"></div>
+            <span class="text-sm font-semibold text-[#9D8140]">ROYAL COLLECTION</span>
+          </div>
+          <h2 class="text-3xl font-bold text-[#5D3A9B] mb-4 font-serif">Sherwanis</h2>
+          <p class="mb-6 text-gray-600 leading-relaxed">Royal and regal sherwanis with rich embroidery and perfect fitting for your most important occasions like weddings and engagements. Each sherwani is a masterpiece of traditional tailoring.</p>
+          <div class="space-y-6">
+            <button onclick="showPopup('Sherwani')" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-lg">Book Now</button>
+            <a href="wedding.html" class="inline-block px-6 py-3 border-2 border-[#5D3A9B] text-[#5D3A9B] rounded-lg hover:bg-[#5D3A9B]/10 transition shadow-lg">View Wedding Collection</a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="images/categories for boys/sherwani.avif" alt="Luxury Sherwani Collection" class="category-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 royal-gradient text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 font-serif">Ready for Your Perfect Fit?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Book a consultation with our master tailors today and experience premium tailoring like never before.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="tel:+919486639475" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[#5D3A9B] text-lg font-bold rounded-full hover:bg-gray-100 transition shadow-xl transform hover:scale-105">
+          <i class="fas fa-phone-alt"></i> Call for Appointment
+        </a>
+        <a href="https://wa.me/919486639475" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#9D8140] text-white text-lg font-bold rounded-full hover:bg-[#C9A845] transition shadow-xl transform hover:scale-105">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+      <p class="mt-8 text-sm opacity-90">11, Arasamara Street, Tirupathur | Open 9:30AM-10:00PM</p>
+    </div>
+  </section>
+
+  <!-- Popup Form -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <button onclick="hidePopup()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <h3 class="text-2xl font-bold text-[#5D3A9B] mb-6 font-serif" id="popup-title">Book Your Design</h3>
+      <form id="booking-form" onsubmit="submitForm(event)">
+        <input type="hidden" id="selected-design">
+        <div class="mb-6">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+          <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]" required>
+        </div>
+        <div class="mb-6">
+          <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+          <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]" required>
+        </div>
+        <div class="mb-6">
+          <label for="event-date" class="block text-gray-700 text-sm font-bold mb-2">Event Date (if applicable)</label>
+          <input type="date" id="event-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]">
+        </div>
+        <div class="mb-6">
+          <label for="details" class="block text-gray-700 text-sm font-bold mb-2">Special Requests</label>
+          <textarea id="details" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D8140]"></textarea>
+        </div>
+        <div class="flex justify-end space-x-4">
+          <button type="button" onclick="hidePopup()" class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition">Cancel</button>
+          <button type="submit" class="px-6 py-3 gold-gradient text-white rounded-lg hover:opacity-90 transition shadow-md">Submit Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleMore(id, button) {
+      const element = document.getElementById(id);
+      const icon = document.getElementById(`icon-${id}`);
+      
+      if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+        button.querySelector('span').textContent = 'Hide Designs';
+        // Smooth scroll to show the expanded content
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        element.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+        button.querySelector('span').textContent = 'View Designs';
+      }
+    }
+
+    function showPopup(design) {
+      document.getElementById('selected-design').value = design;
+      document.getElementById('popup-title').textContent = `Book: ${design}`;
+      document.getElementById('popup').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
+    }
+
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('booking-form').reset();
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const eventDate = document.getElementById('event-date').value;
+      const details = document.getElementById('details').value.trim();
+      const design = document.getElementById('selected-design').value;
+
+      const message = `*New Tailoring Booking Request*\n\n` +
+                      `*Customer Name:* ${name}\n` +
+                      `*Phone Number:* ${phone}\n` +
+                      `*Design Type:* ${design}\n` +
+                      `${eventDate ? `*Event Date:* ${eventDate}\n` : ''}` +
+                      `*Special Requests:* ${details || 'None'}`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/919486639475?text=${encodedMessage}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappURL, '_blank');
+      
+      // Show confirmation message
+      alert("Thank you for your booking request! You'll be redirected to WhatsApp to complete your booking.");
+      
+      // Hide the popup
+      hidePopup();
+      
+      // Reset the form
+      document.getElementById('booking-form').reset();
+    }
+
+    // Close popup when clicking outside
+    document.getElementById('popup').addEventListener('click', function(e) {
+      if (e.target === this) {
+        hidePopup();
+      }
+    });
+  </script>
+</body>
+</html>
+<!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="images/logo/logo.png" alt="New Queen Tailor Logo" class="h-16 w-auto">
+            <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+          </div>
+          <p class="text-gray-400 mb-6">Tirupathur's premier tailoring and embroidery specialists since 1999. Crafting perfection in every stitch.</p>
+          
+          <div class="flex space-x-4">
+            <a href="https://wa.me/919486639475" target="_blank" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="women.html" class="text-gray-400 hover:text-white transition">Women's Tailoring</a></li>
+            <li><a href="men.html" class="text-gray-400 hover:text-white transition">Men's Tailoring</a></li>
+            <li><a href="embroidery.html" class="text-gray-400 hover:text-white transition">Embroidery</a></li>
+            <li><a href="wedding.html" class="text-gray-400 hover:text-white transition">Wedding Collections</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-[#9D8140] border-b border-[#9D8140] pb-2">Contact Us</h3>
+          <address class="not-italic text-gray-400">
+            <div class="flex items-start gap-3 mb-4">
+              <i class="fas fa-map-marker-alt mt-1 text-[#9D8140]"></i>
+              <div>
+                11, Arasamara Street<br>
+                Sivanar Street, Tirupathur – 635601<br>
+                <em class="text-sm">(Opp. Kesavalu Reddy Complex)</em>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-3 mb-3">
+              <i class="fas fa-phone-alt text-[#9D8140]"></i>
+              <a href="tel:+916381568585" class="hover:text-white transition">+91 6381568585</a>
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <i class="fab fa-whatsapp text-[#9D8140]"></i>
+              <a href="https://wa.me/919486639475" target="_blank" class="hover:text-white transition">+91 9486639475</a>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>© 2025 New Queen Tailor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919486639475" target="_blank"
+    class="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition duration-300"
+    title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
+  </a>
+
+  <script>
+    function submitDesign() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const designType = document.getElementById('designType').value.trim();
+      const description = document.getElementById('designDescription').value.trim();
+
+      if (!name || !phone || !designType || !description) {
+        alert('Please fill all required fields marked with *');
+        return;
+      }
+
+      const phoneRegex = /^[6-9]\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid 10-digit Indian phone number');
+        return;
+      }
+
+      let message = `*Custom Embroidery Design Submission*%0A%0A`;
+      message += `*Name:* ${encodeURIComponent(name)}%0A`;
+      message += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+      message += `*Garment Type:* ${encodeURIComponent(designType)}%0A%0A`;
+      message += `*Design Description:*%0A${encodeURIComponent(description)}%0A%0A`;
+      message += `_Please send your design images in this WhatsApp chat._`;
+
+      window.open(`https://wa.me/919486639475?text=${message}`, '_blank');
+    }
+  </script>
+</body>
+</html>
