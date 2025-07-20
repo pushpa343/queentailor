@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://newqueentailor.netlify.app/sitemap.xml

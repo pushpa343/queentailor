@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@alpinejs/transition@3.x.x/dist/cdn.min.js" defer></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Women's Collection | New Queen Tailor</title>
+  <link rel="icon" type="image/png" href="images\logo\logo.png" />
   <link rel="icon" type="image/png" href="images/logo/logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/@alpinejs/transition@3.x.x/dist/cdn.min.js" defer></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -68,44 +72,93 @@
 <body class="bg-gradient-to-b from-[#F8F2EA] to-white text-gray-800">
 
   <!-- Header -->
-  <nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
-    <div class="flex items-center space-x-3">
-      <img src="images/logo/logo without bg.png" alt="New Queen Tailor Logo" class="h-20 w-auto" />
-      <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide font-serif">NEW QUEEN TAILOR</span>
-    </div>
-    <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
-      <li><a href="index.html" class="hover:text-[#9D8140] transition">HOME</a></li>
-      <li><a href="women.html" class="text-[#9D8140] border-b-2 border-[#9D8140]">WOMEN</a></li>
-      <li><a href="men.html" class="hover:text-[#9D8140] transition">MEN</a></li>
-      <li><a href="embroidery.html" class="hover:text-[#9D8140] transition">EMBROIDERY</a></li>
-      <li><a href="order-and-stitch.html" class="hover:text-[#9D8140] transition">ORDER & STITCH</a></li>
-      <li><a href="premium.html" class="hover:text-[#9D8140] transition">PREMIUM</a></li>
-      <li><a href="wedding.html" class="hover:text-[#9D8140] transition">WEDDING TAILORING</a></li>
-      <li class="relative group">
-        <a href="#" class="hover:text-[#9D8140] transition">CONTACT</a>
-        <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-xl p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800 border border-[#9D8140]/20">
-          <div>
-            <h4 class="font-bold mb-2 text-[#5D3A9B]">Contact Us</h4>
-            <p><strong>Call:</strong> +91 6381568585</p>
-            <p><strong>WhatsApp:</strong> +91 9486639475</p>
-            <a href="#" class="text-[#9D8140] block mt-2 hover:underline">Email us</a>
-          </div>
-          <div>
-            <h4 class="font-bold mb-2 text-[#5D3A9B]">Tirupathur Store</h4>
-            <p>11, Arasamara Street,</p>
-            <p>Sivanar Street, Tirupathur – 635601</p>
-            <p class="text-sm italic">(Opp. Kesavalu Reddy Complex)</p>
-          </div>
-          <div>
-            <h4 class="font-bold mb-2 text-[#5D3A9B]">Visit Us</h4>
-            <img src="images/logo/tailor_app_banner.svg" alt="Store location" class="w-32 h-24 object-cover rounded border border-[#9D8140]/20" />
-          </div>
+<!-- 🔝 Navigation Bar -->
+<nav class="flex items-center justify-between px-6 py-4 shadow-md bg-white relative z-50" x-data="{ mobileMenuOpen: false }">
+  <!-- Logo and Brand Name -->
+  <div class="flex items-center space-x-3">
+    <img src="images\logo\logo without bg.png" alt="New Queen Tailor Logo" class="h-20 w-auto" />
+    <span class="text-2xl font-extrabold text-[#9D8140] tracking-wide">NEW QUEEN TAILOR</span>
+  </div>
+
+  <!-- Desktop Navigation Menu -->
+  <ul class="hidden md:flex space-x-6 font-semibold text-sm text-purple-900">
+    <li><a href="index.html" >HOME</a></li>
+    <li><a href="women.html" class="text-[#9D8140] font-bold">WOMEN </a></li>
+    <li><a href="men.html">MEN</a></li>
+    <li><a href="embroidery.html">EMBROIDERY</a></li>
+    <li><a href="order-and-stitch.html">ORDER & STITCH</a></li>
+    <li><a href="premium.html">PREMIUM</a></li>
+    <li><a href="wedding.html">WEDDING TAILORING</a></li>
+    
+    <!-- CONTACT with dropdown (TPT only) -->
+    <li class="relative group">
+      <a href="#" class="hover:text-pink-600">CONTACT</a>
+      <div class="absolute right-0 top-full mt-2 hidden group-hover:flex bg-white shadow-lg p-6 w-[700px] rounded-lg z-50 space-x-6 text-sm text-gray-800">
+        <div>
+          <h4 class="font-bold mb-2">Contact Us</h4>
+          <p><strong>Call:</strong> +91 6381568585</p>
+          <p><strong>WhatsApp:</strong> +91 9486639475</p>
+          <a href="#" class="text-purple-600 block mt-2 hover:underline">Email us</a>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">Tirupathur Store</h4>
+          <p>11, Arasamara Street,</p>
+          <p>Sivanar Street, Tirupathur – 635601</p>
+          <p><em>(Opp. Kesavalu Reddy Complex)</em></p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-2">Visit Us</h4>
+          <img src="images\logo\tailor_app_banner.svg" class="w-32 h-24 object-cover rounded" />
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Mobile Menu Button -->
+  <div class="md:hidden">
+    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-purple-900 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div x-show="mobileMenuOpen" 
+       x-transition:enter="transition ease-out duration-300"
+       x-transition:enter-start="opacity-0 transform -translate-y-2"
+       x-transition:enter-end="opacity-100 transform translate-y-0"
+       x-transition:leave="transition ease-in duration-200"
+       x-transition:leave-start="opacity-100 transform translate-y-0"
+       x-transition:leave-end="opacity-0 transform -translate-y-2"
+       @click.away="mobileMenuOpen = false"
+       class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg z-50">
+    <ul class="py-4 px-6 space-y-4 font-semibold text-purple-900">
+      <li><a href="index.html" class="block py-2">HOME</a></li>
+      <li><a href="women.html" class="block py-2  text-[#9D8140] font-bold">WOMEN</a></li>
+      <li><a href="men.html" class="block py-2">MEN</a></li>
+      <li><a href="embroidery.html" class="block py-2">EMBROIDERY</a></li>
+      <li><a href="order-and-stitch.html" class="block py-2">ORDER & STITCH</a></li>
+      <li><a href="premium.html" class="block py-2">PREMIUM</a></li>
+      <li><a href="wedding.html" class="block py-2">WEDDING TAILORING</a></li>
+      <li>
+        <div class="pt-4 border-t border-gray-200">
+          <h4 class="font-bold mb-2">Contact Us</h4>
+          <p><a href="tel:+916381568585" class="block py-1 text-purple-600">Call: +91 6381568585</a></p>
+          <p><a href="https://wa.me/919486639475" class="block py-1 text-purple-600">WhatsApp: +91 9486639475</a></p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h4 class="font-bold mb-2">Tirupathur Store</h4>
+          <p class="text-sm">11, Arasamara Street,</p>
+          <p class="text-sm">Sivanar Street, Tirupathur – 635601</p>
+          <p class="text-sm italic">(Opp. Kesavalu Reddy Complex)</p>
         </div>
       </li>
     </ul>
-    <div class="flex items-center space-x-4">
-    </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Hero Banner -->
   <section class="relative py-24 bg-gradient-to-r from-[#9D8140]/10 to-[#5D3A9B]/10 overflow-hidden">
